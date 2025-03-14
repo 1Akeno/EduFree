@@ -1,3 +1,5 @@
+console.log("Script loaded!"); // Debugging: Check if script is running
+
 // Array to store flashcards
 let flashcards = [];
 
@@ -17,7 +19,7 @@ const importQuizizzButton = document.getElementById('import-quizizz');
 
 // Add a new flashcard
 flashcardForm.addEventListener('submit', (e) => {
-  e.preventDefault();
+  e.preventDefault(); // Prevent the form from submitting
   const question = questionInput.value;
   const answer = answerInput.value;
 
@@ -26,6 +28,8 @@ flashcardForm.addEventListener('submit', (e) => {
     displayFlashcards();
     questionInput.value = '';
     answerInput.value = '';
+  } else {
+    alert('Please fill in both the question and answer fields.');
   }
 });
 
