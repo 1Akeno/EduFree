@@ -3,12 +3,56 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>EduFree</title>
+  <title>EduFree - Your Free Learning Companion</title>
   <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
-  <h1>Welcome to EduFree!</h1>
-  <p>Your free learning companion.</p>
+  <header>
+    <h1>EduFree</h1>
+    <p>Your Free Learning Companion</p>
+  </header>
+
+  <main>
+    <!-- Flashcard Editor -->
+    <section id="flashcard-editor">
+      <h2>Create Flashcards</h2>
+      <p class="subline">Or import them from Quizizz</p>
+      
+      <form id="flashcard-form">
+        <input type="text" id="question" placeholder="Enter a question" required>
+        <input type="text" id="answer" placeholder="Enter the answer" required>
+        <button type="submit">Add Flashcard</button>
+      </form>
+
+      <!-- Import from Quizizz -->
+      <div id="quizizz-import">
+        <h3>Import from Quizizz</h3>
+        <input type="text" id="quizizz-link" placeholder="Paste Quizizz link">
+        <button type="button" id="import-quizizz">Import</button>
+      </div>
+
+      <div id="flashcard-list"></div>
+    </section>
+
+    <!-- Quiz Mode -->
+    <section id="quiz-mode">
+      <h2>Quiz Mode</h2>
+      <p class="subline">Test your knowledge with interactive quizzes.</p>
+      
+      <div id="quiz-container">
+        <p id="quiz-question"></p>
+        <input type="text" id="quiz-answer" placeholder="Your answer">
+        <button id="submit-answer">Submit</button>
+        <p id="quiz-feedback"></p>
+      </div>
+      <button id="start-quiz">Start Quiz</button>
+    </section>
+  </main>
+
+  <footer>
+    <p>Made with ❤️ by Akeno</p>
+  </footer>
+
   <script src="js/script.js"></script>
 </body>
 </html>
